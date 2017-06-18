@@ -1,0 +1,83 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+%\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{url}
+\usepackage{algorithmic}%
+\usepackage{algorithm}%
+\usepackage{multirow}%
+\usepackage{xcolor}%
+\usepackage{subcaption}%
+\usepackage{placeins}%
+\usepackage{circuitikz}%
+
+\usepackage{url}
+% Making the references and links clickable
+\usepackage{hyperref}
+\hypersetup{
+    %colorlinks=false,
+    pdfborder={0 0 0}
+}
+
+\usepackage{xcolor}
+\newcommand{\toDo}[1]{\textcolor{red}{#1}}
+\newcommand{\mymotor}[2] % #1 = name , #2 = rotation angle
+{\draw[thick,rotate=#2] (#1) circle (10pt)
+ node[]{$\mathsf M$} 
+++(-12pt,3pt)--++(0,-6pt) --++(2.5pt,0) ++(-2.8pt,6pt)-- ++(2.5pt,0pt);
+\draw[thick,rotate=#2] (#1) ++(12pt,3pt)--++(0,-6pt) --++(-2.5pt,0) 
+++(2.8pt,6pt)-- ++(-2.5pt,0pt);
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{University of Brasília}
+\rhead{\thepage}
+\cfoot{Comparing the Performance of Finite-State Machines with Different Numbers of States on TORCS}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+    \title{Comparing the Performance of\\Finite-State Machines with\\Different Numbers of States on TORCS}
+    
+    \author{\IEEEauthorblockN{Bruno H. F. Macedo\IEEEauthorrefmark{1} and
+            Gabriel F. P. Araujo\IEEEauthorrefmark{1}}
+        \IEEEauthorblockA{\IEEEauthorrefmark{1}University of Brasília}
+        % \IEEEauthorblockA{\IEEEauthorrefmark{2}gnramos@unb.br}
+        }
+    
+    \maketitle
+    
+    \begin{abstract}
+        
+        This work presents two different approaches developed to control a self-driving car in the racing environment
+                
+    \end{abstract}
+    
+    \begin{IEEEkeywords}
+        
+        finite state machines, computer games, TORCS, artificial intelligence, genetic algorithms, self-driving car
+        \toDo{Finish keywords}
+        
+    \end{IEEEkeywords}
+    
+ 
+    \input{Introduction}
+    % \input{TORCS_Environment}
+    % \input{Related_Works}
+    % \input{FSMDriver_ControllerStructure}
+    % \input{Genetic_Algorithm}
+    % \input{Methodology_Experiments}
+    % \input{Analysis_Conclusion}
+    % \input{Future_Works}
+    
+    %\nocite{*}
+    \bibliographystyle{IEEEtran}
+    \bibliography{Bibliography}
+    \toDo{Adequar as referências ao padrão do IEEE: \url{http://www.ieee.org/documents/ieeecitationref.pdf}. Quando
+    há 3 ou mais autores colocar et al.}
+    
+    
+    
+\end{document}
