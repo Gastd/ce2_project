@@ -1,6 +1,6 @@
 \begin{figure}[htp!]
 \begin{center}
-\begin{circuitikz}
+\begin{circuitikz} %\label{sec:1}
     \draw (2,0) node[npn](q1) at (2,0){}
     (q1.E) node[npn](q4) at (2,-1.55){}
     (q1.E) -- (q4.C);
@@ -30,6 +30,6 @@
     % \draw (q1.B) -- to[R=100<\ohm>]{};
     % \draw (0,0) node[npn](npn) at (0,0){};
 \end{circuitikz}
-\caption{Ponte H}
+\caption{Ponte H}\label{fig:schem}%
 \end{center}
 \end{figure}
