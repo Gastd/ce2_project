@@ -1,25 +1,31 @@
 \section{\textbf{Simulation}}\label{sec:3}
 
-    The circuit was simulated using PSpice software distributed by OrCAD. The circuit shown in Figure~\ref{fig:schem} was reproduced in PSpice (see Figure~\ref{fig:pspice}). The software does not support the transistor model used in the actual implementation, the TIP31C, instead the Q2N2222 was used to replace it given they are very similar, only the maximum supported values for voltages change. The value of all transistors base resistances was set to $100\:\Omega$. The DC motor simplified equivalent circuit is an inductor and a resistor~\cite{CHAPMAN}. The U8 and U7 times were set to $500\; ms$.\newline
+\begin{figure*}
+\centering
+	\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/schem_pspice.png}
+    \caption{Schematic on PSpice program.}\label{fig:schem_pspice}%
+    \end{subfigure}    
+    \begin{subfigure}{.45\textwidth}
+    ~
+    \centering
+    \includegraphics[width=\linewidth, height=6.4cm]{img/plot.png}
+    \caption{Current x Time} \label{fig:plot_ponteh}
+	\end{subfigure}
+	\caption{Simulation analysis.}
+	
+\end{figure*}
+
+    The circuit design was simulated using PSpice software distributed by OrCAD. The circuit shown in Figure~\ref{fig:schem} was reproduced in PSpice (see Figure \ref{fig:schem_pspice}). The software does not support the transistor model used in the actual implementation, the TIP31C, instead the Q2N2222 was used to replace it given they are very similar, only the maximum supported values for voltages change. The value of all transistors base resistances was set to $100\:\Omega$. The DC motor simplified equivalent circuit is an inductor and a resistor~\cite{CHAPMAN}. The U8 and U7 times were set to $500\; ms$.\newline
     The motor used in the tests are the one included on the Magician Chassis\footnote{https://www.sparkfun.com/products/retired/12866} by Sparkfun, they have the following characteristics:
     \begin{itemize}
-    \item Max Motor Voltage: 6 VDC;
-    \item No Load Speed: $90\pm10$ rpm;
-    \item No Load Current:190 mA (max.250 mA);
-    \item Torque: 800 gf.cm;
+        \item Max Motor Voltage: 6 VDC;
+        \item No Load Speed: $90\pm10$ rpm;
+        \item No Load Current:190 mA (max.250 mA);
+        \item Torque: 800 gf.cm;
     \end{itemize}
-	Finally a transient analysis over the circuit was made and the current flowing through the motor is plotted in Figure~\ref{fig:plot_ponteh}. The simulated circuit behavior is exactly the expected, when Q1 and Q3 are activated the current flows... \todo{{FIND THE ROTATION DIRECTION FOR EACH TRANSISTOR PAIR}}
-
-\begin{figure}
-\centering
-\includegraphics[height=.4\textwidth]{img/schem_pspice.png}
-\caption{Schematic on PSpice program.}\label{fig:pspice}%
-\end{figure}
+	Finally a transient analysis over the circuit was made and the current flowing through the motor is plotted in Figure~\ref{fig:plot_ponteh}. The simulated circuit behavior is exactly the expected, when Q1 and Q2 are activated the current flows in the positive direction, in opposition to Q3 and Q4 active which results in a negative current flow.
 	
-\begin{figure}
-\centering
-\includegraphics[height=.3\textwidth]{img/plot.png}
-\caption{Current x Time} \label{fig:plot_ponteh}
-\end{figure}	
 
 \input{ponteH}
