@@ -23,10 +23,30 @@
 
     \subsubsection{Printing} % (fold)
     \label{ssub:printing}
-        The H Bridge PCB was made on a CNC machine, which can be either milling as drill machine being able to made the circuit tracks and drill the components holes. The CNC machine is set at LARA, Figure~\ref{fig:workstation}, an ENE-UnB laboratory, and it has been used for prototyping PCBs. With the layout done in Fritizing the project was exported in a Geber extension(RS-274X) and then it was used the FlatCAM\footnote{\url{http://flatcam.org/}} software to read the Geber files and generate the G code of the path for the milling and drill tool. After setting the length of the tools, the CNC machine was calibrated and leveled, so it was started the PCB printing. The first version of the circuit gone through the continuity test, it was corrected some printing issues as tracks not fully separated, also the hole for the switch was too tight then it was used a Dremel to increase the radius. Finished the PCB test, the soldering had begun, the first components soldier was resistors as they're the less problematic components, followed by the transistors and then the headers for the power source and the motor. Due to an undesired current on the motor when the switch is turned off, a new version of the board was designed, printed and assembled, the new version has 4 new resistors connecting each transistor's base to the ground, the main value of this resistors are $1k\Omega$.
+        The H Bridge PCB was made on a CNC machine, which can be either milling as drill machine being able to made the circuit tracks and drill the components holes. The CNC machine is set at LARA, Figure~\ref{fig:workstation}, an ENE-UnB laboratory, and it has been used for prototyping PCBs. With the layout done in Fritizing the project was exported in a Geber extension(RS-274X) and then it was used the FlatCAM\footnote{\url{http://flatcam.org/}} software to read the Geber files and generate the G code of the path for the milling and drill tool. After setting the length of the tools, the CNC machine was calibrated and leveled, so it was started the PCB printing. The first version of the circuit gone through the continuity test, it was corrected some printing issues as tracks not fully separated, also the hole for the switch was too tight then it was used a Dremel to increase the radius. Finished the PCB test, the soldering had begun, the first components soldier was resistors as they're the less problematic components, followed by the transistors and then the headers for the power source and the motor. Due to an undesired current on the motor when the switch is turned off, a new version of the board was designed, printed and assembled, the new version has 4 new resistors connecting each transistor's base to the ground, the value of this resistors are $1.8k\Omega$ and the main reason to add they on the circuit is to pull down the floating current when the wire is turned off by the switch.
+        %( see the version 1 in Figure~\ref{fig:version1} and the version 2 in Figure~\ref{fig:version2}).
     % subsubsection printing (end)
 	
 	For the sake of validation the Magician Chassis (see Figure~\ref{fig:mag}) was properly assembled and each board produced was attached to a motor which was connected to a wheel of the Chassis. This allowed the vehicle to move forward or backward depending on the switch's position.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}{\columnwidth}
+\centering%
+\includegraphics[height=.55\textwidth]{img/ponteH_pcb_new.png}
+\caption{PCB layout version 2.}
+\label{fig:new_layout}%
+\end{subfigure}
+
+\begin{subfigure}{\columnwidth}
+\centering%
+\includegraphics[height=.55\textwidth]{img/ponteH_schem_new.png}
+\caption{Schematic version 2.}
+\label{fig:new_schem}%
+\end{subfigure}
+\label{fig:h_schem_v2}
+\caption{H bridge version 2.}
+\end{figure}
 
 \begin{figure}[t]
 \centering
@@ -67,8 +87,8 @@
 \caption{PCB design on Fritizing.}
 \label{fig:pcb_fritz}
 \end{subfigure}
-
-\caption{H Bridge on Fritizing.}
+\label{fig:version1}
+\caption{H Bridge on Fritizing, circuit version 1.}
 \end{figure}
 
 
