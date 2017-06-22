@@ -1,15 +1,8 @@
 \section{\textbf{Evaluation}}\label{sec:5}
 
-	First of all the breadboard circuit~\ref{fig:proto_board} was tested using a multimeter to ensure it's proper functionality. With Q1 and Q2 activated the voltage measured across the motor was $3.8\;V$ \todo{review values}, for future analysis this situation (Q1 and Q2 active) will be called S1. With Q3 and Q4 activated the voltage measured was $-2.9\;V$, this will be the S2 situation. The polarity inversion was accomplished, however the magnitude for both cases which was expected to be equal was in fact different. A slightly tension drop occurred when the current flew backwards \todo{explain why. idk why}. \todo{ADDITIONAL: MEASURE MOTOR SPIN SPEED}
+	First of all the breadboard circuit (Figure~\ref{fig:proto_h}) was tested using a multimeter to ensure it's proper functionality. With Q1 and Q2 activated the voltage measured across the motor was $3.5\;V$, for future analysis this situation (Q1 and Q2 active) will be called S1. With Q3 and Q4 activated the voltage measured was $-2.6\;V$, this will be the S2 situation. The polarity inversion was accomplished, however the magnitude for both cases which was expected to be equal was in fact different. A slightly tension drop occurred when the current flew backwards \todo{explain why. idk why}. One important thing to mention is that when the transistor is turned off (base voltage = 0) it's output is not exactly equals zero, it shows a remainder voltage of $0.6\;V$ however this tension is not enough to move the motor.
 	
 	Despite the previous mentioned discrepancy the circuit performed as intentioned therefore the motor was plugged into the circuit. For S1 the motor spun in the counterclockwise direction. On the other hand for S2 it spun clockwise slightly slower, as a result of the voltage drop previous mentioned.
 	
-	Finally with the printed circuit board in hands the tension across the output pins were once again measured with a voltmeter. In case S1 the voltage showed up to be \todo{MEASURE THIS!!!}. Though for S2 the tension measured was \todo{measure}. As the PCB performed exactly as the breadboard circuit the motor was connected and the final configuration was achieved. \todo{measure motor speed and direction and insert here}
+	Finally with the printed circuit board in hands the tension across the output pins were once again measured with a voltmeter. In case S1 the voltage showed up to be $3.6\;V$ which is equal to the breadboard circuit, the same occurred for S2. As the PCB performed exactly as the breadboard circuit the motor was connected and the final configuration was achieved. \todo{ADDITIONAL: MEASURE MOTOR SPIN SPEED}
 
-\begin{figure}[t]
-\centering
-\centering%
-\includegraphics[height=.30\textwidth]{img/h_bridge_proto_close.jpg}
-\caption{H bridge on breadboard.}
-\label{fig:proto_board}%
-\end{figure}
