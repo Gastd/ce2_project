@@ -1,2 +1,13 @@
 \section{\textbf{Theory}}\label{sec:2}
-    \todo{talk about the theory and the calculus. What theory? what calculus?WHAAAT?}
+    Performing a circuit analysis~\cite{IRWIN} for the circuit in Figure~\ref{fig:schem_pspice} for $R_{b}$ being the base resistance, $V_{s}$ the source voltage and $R_{m}$ the equivalent motor resistance we obtain as follows:
+\begin{itemize}
+    
+\item Considering Q1 and Q2 as short circuits and Q3 and Q4 as open nodes
+\begin{equation}
+I_{m} = \frac{V_{s}}{R_{m}}
+\end{equation}
+\item Considering Q3 and Q4 as short circuits and Q1 and Q2 as open nodes
+\begin{equation}
+I_{m} = -\frac{V_{s}}{R_{m}}
+\end{equation}
+\end{itemize}
