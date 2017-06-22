@@ -6,25 +6,26 @@
 	
 	Finally with the printed circuit board in hands the tension across the output pins were once again measured with a voltmeter. In case S1 the voltage showed up to be $3.6\;V$ which is equal to the breadboard circuit, the same occurred for S2. As the PCB performed exactly as the breadboard circuit the motor was connected and the final configuration version 1 was achieved.
 	
-	In order to achieve a better performance and eliminate the previous mentioned tension drop for S2 this configuration needed to change a bit. A possible cause for this issue was a remaining current when the transistor should be turned off. Hence four resistors were added between the transistor's base resistor and the ground node (see Figure~\ref{fig:h_schem_v2}. The intention of this change is to force any remaining current flows to the ground node.
+	In order to achieve a better performance and eliminate the previous mentioned tension drop for S2 this configuration needed to change a bit. A possible cause for this issue was a remaining voltage when the transistor should be turned off. Hence four resistors were added between the transistor's base resistor and the ground node (see Figures~\ref{fig:new_layout} and~\ref{fig:new_schem}). The intention of this change is to force any remaining current flows to the ground node.
 	
 	The final configuration version 2 filled the expectations. For S1 case the tension across the motor was $3.84\;V$. And now for S2 case the tension showed to be $-3.78\;V$ which result in equal spin velocity for both cases.
 	
 \begin{figure}
 \centering
-\begin{subfigure}{\columnwidth}
-\centering%
-\includegraphics[width=\columnwidth]{img/ponteH_pcb_new.png}
-\caption{PCB layout version 2.}
-\label{fig:new_layout}%
-\end{subfigure}
+    \begin{subfigure}{\columnwidth}
+    \centering%
+    \includegraphics[width=\columnwidth]{img/ponteH_pcb_new.png}
+    \caption{PCB layout version 2.}
+    \label{fig:new_layout}%
+    \end{subfigure}
 
-\begin{subfigure}{\columnwidth}
-\centering%
-\includegraphics[width=\columnwidth]{img/ponteH_schem_new.png}
-\caption{Schematic version 2.}
-\label{fig:new_schem}%
-\end{subfigure}
-\label{fig:h_schem_v2}
+    \begin{subfigure}{\columnwidth}
+    \centering%
+    \includegraphics[width=\columnwidth]{img/ponteH_schem_new.png}
+    \caption{Schematic version 2.}
+    \label{fig:new_schem}%
+    \end{subfigure}
+
+\label{fig:h_schem_v2}%
 \caption{Final configuration version 2.}
 \end{figure}

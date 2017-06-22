@@ -1,16 +1,16 @@
 \section{\textbf{Manufacturing}}\label{sec:4}
-    For this project two PCB were made, hence in the presentation will be used two motors.
-    As the simulation (see Section~\ref{sec:3}) proved that the designed circuit (see Figure~\ref{fig:schem}) works as intended the physical components were assembled in a breadboard for further testing and validation before the final manufacturing \todo{complete with relevant information about final board}. Figure~\ref{fig:proto_h} shows the circuit properly assembled. This circuit's evaluation will be further discussed in Section~\ref{sec:5}.
+    For this project two PCB were made, hence in the presentation will be used two motors, also two version of the H bridge circuit were produced, the cause will be arguing in sections~\ref{ssub:printing} and~\ref{sec:5}.
+    As the theory and simulation (see Sections~\ref{sec:2} and~\ref{sec:3}, respectively) proved that the designed circuit (see Figure~\ref{fig:schem}) works as intended the physical components were assembled in a breadboard for further testing and validation before the final manufacturing. Figure~\ref{fig:proto_h} shows the circuit properly assembled. The circuit's evaluation will be further discussed in Section~\ref{sec:5}.
 
     \subsubsection{Fritizing} % (fold)
     \label{ssub:fritizing}
         For aid the design of the printed circuit board it was used the software Fritizing\footnote{\url{http://fritzing.org/}}, that is an open source software used worldwide by hobbyists and it is an Electronic Design Automation software.
-        The software Fritizing has 3 environments, shown in Figure~\ref{fig:breadboard}, they are breadboard, schematic and PCB, it was used only the schematic and design environments since the breadboard already has been evaluated. The Figures~\ref{fig:schem_fritz} and~\ref{fig:pcb_fritz} show the schematics and PCB environments designing the board.
+        The software Fritizing has 3 environments, shown in Figure~\ref{fig:breadboard}, they are breadboard, schematic and PCB, it was used only the schematic and design environments since the breadboard already has been evaluated(see Section~\ref{sec:5} for more). The Figures~\ref{fig:schem_fritz} and~\ref{fig:pcb_fritz} show the schematics and PCB environments with circuit board designed.
     % subsubsection fritizing (end)
 
     \subsubsection{Design} % (fold)
     \label{ssub:design}
-        After tested on breadboard the H Bridge goes to design step were the components and PCB layout were chosen. The board have the following components:
+        After tested on breadboard the H Bridge went to design step were the components and PCB layout were chosen. The first version of the board have the following components:
         \begin{itemize}
             \item 1 switch with 3 states (on 1, off, on 2);
             \item 4 transistors NPN TIP31C;
@@ -23,10 +23,11 @@
 
     \subsubsection{Printing} % (fold)
     \label{ssub:printing}
-        The H Bridge PCB was made on a CNC machine, which can be either milling as drill machine being able to made the circuit tracks and drill the components holes. The CNC machine is set at LARA, Figure~\ref{fig:workstation}, an ENE-UnB laboratory, and it has been used for prototyping PCBs. With the layout done in Fritizing the project was exported in a Geber extension(RS-274X) and then it was used the FlatCAM\footnote{\url{http://flatcam.org/}} software to read the Geber files and generate the G code of the path for the milling and drill tool. After setting the length of the tools, the CNC machine was calibrated and leveled, so it was started the PCB printing. The first version of the circuit gone through the continuity test, it was corrected some printing issues as tracks not fully separated, also the hole for the switch was too tight then it was used a Dremel to increase the radius. Finished the PCB test, the soldering had begun, the first components soldier was resistors as they're the less problematic components, followed by the transistors and then the headers for the power source and the motor. Due to an undesired current on the motor when the switch is turned off, a new version of the board was designed, printed and assembled, the new version has 4 new resistors connecting each transistor's base to the ground, the value of this resistors are $1.8k\Omega$ and the main reason to add they on the circuit is to pull down the floating current when the wire is turned off by the switch.
+        The H Bridge PCB was made on a CNC machine, which can be either milling as drill machine being able to made the circuit tracks and drill the components holes. The CNC machine is set at LARA, Figure~\ref{fig:workstation}, an ENE-UnB laboratory, and it has been used for prototyping PCBs. With the layout done in Fritizing the project was exported in a Geber extension(RS-274X) and then it was used the FlatCAM\footnote{\url{http://flatcam.org/}} software to read the Geber files and generate the G code of the path for the milling and drill tool. After setting the length of the tools, the CNC machine was calibrated and leveled, so it was started the PCB printing. The first version of the circuit gone through the continuity test, it was corrected some printing issues as tracks not fully separated, also the holes for switch was too tight then it was used a Dremel to increase the radius. Finished the PCB test, the soldering had begun, the first components soldier was resistors as they're the less problematic components, followed by the transistors and then the headers for the power source and the motor. Due to an undesired current on the motor when the switch is turned off, a new version of the board was designed, printed and assembled, the new version has 4 new resistors connecting each transistor's base to the ground, the value of this resistors are $1.8k\Omega$ and the main reason to add they on the circuit is to pull down the floating current when the wire is turned off by the switch.
         %( see the version 1 in Figure~\ref{fig:version1} and the version 2 in Figure~\ref{fig:version2}).
     % subsubsection printing (end)
 	
+    For better visualization two pairs of resistor-led were add to the circuit parallel with the motor to show to where the current is flowing, the nominal value of the resistors were chosen as $1k\Omega$ allowing the current to go to the motor.
 	For the sake of validation the Magician Chassis (see Figure~\ref{fig:mag}) was properly assembled and each board produced was attached to a motor which was connected to a wheel of the Chassis. This allowed the vehicle to move forward or backward depending on the switch's position.
 
 \begin{figure}
